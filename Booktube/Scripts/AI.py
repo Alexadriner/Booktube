@@ -13,6 +13,7 @@ class AI:
         self.book_length = 0
         self.chapter_ammount = 0
         self.chapter_slice_ammount = 0
+					self.word_document = Word_Document()
 
     def request(self, message):
         self.client = OpenAI(
