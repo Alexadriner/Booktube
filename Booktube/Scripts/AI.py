@@ -77,9 +77,9 @@ class AI:
                 print(f"chapterpart before: {chapter_part}")
                 for ai in ai_list:
                     chapter_part = self.control_chapterpart(ai, outline, i_chapter, i_chapterpart, chapter_part)
-                self.word_document.append(f"{chapter_part} \n")
+                self.word_document.append_paragraph(f"{chapter_part} \n")
                 print(f"chapterpart after: {chapter_part}")
-            self.file.write("\n")
+            self.word_document.append_paragraph("\n")
 
     def get_title(self):
         title = self.request(f"Welchen Titel würdest du folgendem Buch geben?: {self.book}")
