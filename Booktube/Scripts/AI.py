@@ -64,9 +64,7 @@ class AI:
         improved_chapterpart = self.request(f"Verbessere bitte dein erstelltes Kapitel {chapter}.{chapterpart}: {chapterpart_text} mit deiner Gliederung: {outline} mit folgender Kritik: {critic}  Formatiere bitte den Text so, dass er aus einem txt Dokument in ein docx Dokument umgewandelt werden kann, ohne Formatierungsfehler zu erhalten. Die Schriftart soll Arial sein und überschriften sollen Größer als der Text sein. Bitte achte auf eine gescheite Formatierung")
         return improved_chapterpart
 
-    def create_book(self, ai_list, file):
-        self.file = open(file, "a")
-        
+    def create_book(self, ai_list, file): 
         outline = self.create_outline("Roman", "Actionthriller", 150, 10)
         print(f"outline before: {outline}")
         for ai in ai_list:
@@ -79,7 +77,7 @@ class AI:
                 print(f"chapterpart before: {chapter_part}")
                 for ai in ai_list:
                     chapter_part = self.control_chapterpart(ai, outline, i_chapter, i_chapterpart, chapter_part)
-                self.file.write(f"{chapter_part} \n")
+                self.word_document.append(f"{chapter_part} \n")
                 print(f"chapterpart after: {chapter_part}")
             self.file.write("\n")
 
