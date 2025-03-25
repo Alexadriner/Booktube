@@ -2,6 +2,7 @@ from openai import OpenAI
 import requests
 import json
 import os
+import
 
 class AI:
     def __init__(self, ai_model, api_key):
