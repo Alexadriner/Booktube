@@ -21,4 +21,4 @@ class Word_Document:
 
     def append_paragraph(self, paragraph):
         improved_paragraph = self.remove_insignificancies(paragraph)
-self.document.add_paragraph(improved_paragraph)
+					self.document.add_paragraph(improved_paragraph)
