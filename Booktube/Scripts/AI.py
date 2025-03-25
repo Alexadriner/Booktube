@@ -2,7 +2,7 @@ from openai import OpenAI
 import requests
 import json
 import os
-import
+from Word_Document import Word_Document
 
 class AI:
     def __init__(self, ai_model, api_key):
