@@ -1,0 +1,5 @@
+Api_Keys:
+- Deepseek: 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
+- OpenAI o3 mini: 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
+
+stellaris: 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
